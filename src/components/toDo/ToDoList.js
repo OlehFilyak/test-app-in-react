@@ -1,4 +1,6 @@
 import ToDoItem from "./ToDoItem.js";
+import PropTypes from "prop-types";
+
 const styles = {
   ul: {
     listStyle: "none",
@@ -17,4 +19,7 @@ function ToDoList(props) {
   );
 }
 
+ToDoList.propTypes = {
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 export default ToDoList;

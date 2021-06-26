@@ -1,4 +1,5 @@
-export default function ToDoItem({ todo, index }) {
+import PropTypes from "prop-types";
+function ToDoItem({ todo, index }) {
   return (
     <li>
       <strong>{index + 1}</strong>
@@ -6,3 +7,10 @@ export default function ToDoItem({ todo, index }) {
     </li>
   );
 }
+
+ToDoItem.propTypes = {
+  todo: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
+};
+
+export default ToDoItem;
