@@ -10,8 +10,8 @@ const styles = {
 function ToDoList(props) {
   return (
     <ul style={styles.ul}>
-      {props.todos.map((todo) => {
-        return <ToDoItem todo={todo} key={todo.id} />;
+      {props.todos.map((todo, index) => {
+        return <ToDoItem todo={todo} key={todo.id} index={index} />;
       })}
     </ul>
   );
